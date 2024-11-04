@@ -1,1 +1,1 @@
-this is day1 notes
+this is day1 notes based on c
