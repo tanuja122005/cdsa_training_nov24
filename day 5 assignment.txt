@@ -6,7 +6,6 @@ int removeDuplicates(int arr[], int size) {
     for (int i = 0; i < size; i++) {
         int isDuplicate = 0;
 
-        // Check if arr[i] is already in the new array
         for (int j = 0; j < newSize; j++) {
             if (arr[i] == arr[j]) {
                 isDuplicate = 1;
@@ -14,7 +13,6 @@ int removeDuplicates(int arr[], int size) {
             }
         }
 
-        // If not a duplicate, add it to the new array
         if (!isDuplicate) {
             arr[newSize] = arr[i];
             newSize++;
@@ -45,26 +43,21 @@ int main() {
 int main() {
     int size, target;
     
-    // Input array size
     printf("Enter the size of the array: ");
     scanf("%d", &size);
     
     int arr[size];
     
-    // Input array elements
     printf("Enter %d elements of the array:\n", size);
     for (int i = 0; i < size; i++) {
         scanf("%d", &arr[i]);
     }
     
-    // Input the target number
     printf("Enter the number to find its frequency: ");
     scanf("%d", &target);
     
-    // Calculate frequency
     int frequency = findFrequency(arr, size, target);
     
-    // Output the frequency
     printf("The frequency of %d is: %d\n", target, frequency);
     
     return 0;
